@@ -1,0 +1,15 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>E:\Kuldip\T1S1\Workshop\Chapter8_Ex6\Publish\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>\\Server\Chapter8_Ex6\</InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ApplicationRevision>1</ApplicationRevision>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

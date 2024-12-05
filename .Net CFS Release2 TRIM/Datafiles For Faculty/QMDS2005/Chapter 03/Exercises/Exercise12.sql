@@ -1,0 +1,1 @@
+SELECT ContactID, CardType FROM Sales.ContactCreditCard JOIN Sales.CreditCard ON ContactCreditCard.CreditCardID = CreditCard.CreditCardID WHERE CardType = 'Vista'

@@ -1,0 +1,1 @@
+SELECT SalesPersonID, Name FROM Sales.SalesPerson JOIN Sales.SalesTerritory ON SalesPerson.TerritoryID = SalesTerritory.TerritoryID

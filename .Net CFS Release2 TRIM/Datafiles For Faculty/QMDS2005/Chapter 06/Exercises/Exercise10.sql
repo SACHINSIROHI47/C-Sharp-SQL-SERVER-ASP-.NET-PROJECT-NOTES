@@ -1,0 +1,1 @@
+Select * from Sales.Store Where SalesPersonID = 277 and Contains (Name, 'Bike')

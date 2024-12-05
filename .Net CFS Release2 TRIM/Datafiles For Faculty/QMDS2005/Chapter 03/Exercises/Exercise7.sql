@@ -1,0 +1,1 @@
+SELECT SalesOrderID, CardType, 'Total Due' = Round (TotalDue, 0) FROM Sales.SalesOrderHeader s join Sales.CreditCard c on s.CreditCardID = c.CreditCardID

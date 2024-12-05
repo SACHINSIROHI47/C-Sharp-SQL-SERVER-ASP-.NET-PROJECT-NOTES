@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter8_Ac1_TimeCompontent", "Chapter8_Ac1_TimeCompontent.csproj", "{CD9C9002-022F-4D8F-97B0-771EE9108069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter8_Ac1_ConsumerApplication", "Chapter_8_Ac1_ConsumerApplication\Chapter8_Ac1_ConsumerApplication.csproj", "{30B864A5-B6E2-46DE-B124-7A4B9BA343E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD9C9002-022F-4D8F-97B0-771EE9108069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9C9002-022F-4D8F-97B0-771EE9108069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9C9002-022F-4D8F-97B0-771EE9108069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9C9002-022F-4D8F-97B0-771EE9108069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B864A5-B6E2-46DE-B124-7A4B9BA343E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B864A5-B6E2-46DE-B124-7A4B9BA343E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B864A5-B6E2-46DE-B124-7A4B9BA343E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B864A5-B6E2-46DE-B124-7A4B9BA343E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

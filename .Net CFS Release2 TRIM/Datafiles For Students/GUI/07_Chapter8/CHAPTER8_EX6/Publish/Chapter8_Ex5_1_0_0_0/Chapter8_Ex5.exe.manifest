@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asmv1:assemblyIdentity name="Chapter8_Ex5.exe" version="1.0.0.0" publicKeyToken="b7c61721567b41d3" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Chapter8_Ex5" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Chapter8_Ex5.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site">
+          <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="USERNAME" />
+          <IPermission class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Allowed="AssemblyIsolationByUser" UserQuota="9223372036854775807" Expiry="9223372036854775807" Permanent="True" />
+          <IPermission class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, Execution, ControlEvidence" />
+          <IPermission class="System.Security.Permissions.UIPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Window="AllWindows" Clipboard="OwnClipboard" />
+          <IPermission class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Net.DnsPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+          <IPermission class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" version="1" Level="DefaultPrinting" />
+        </PermissionSet>
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Chapter8_Ex5.exe" size="20480">
+      <assemblyIdentity name="Chapter8_Ex5" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QdYAYXxjgCDnhvZ2GmbmxB5Ux9Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CValidator.dll" size="16384">
+      <assemblyIdentity name="CValidator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>gkHu22AH9hsy3vLodt5a6rbFoQU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=INNIIT\Kuldip.Sagar" issuerKeyHash="e5515da757ef00efc613256036f9ea2a6331928e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>POXqekOf6crVU9hEhsPQdk58Y4s=</DigestValue></Reference></SignedInfo><SignatureValue>LBuortZYfZyhsFzQ9k4LJjUfKfraItKptxQ69Wc7TPPOv38ed7mjvR+ijQmfanPFCKsYUTE5kLcL8IbcfOlmw1ZUiw4GQc2/S/koQWX+3rDXQXUykdkdHVP5XsWr2F5jbyBjFOb6bESInOnwpuoUF8U0m/eB+B8LJp78OQVP5Mg=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wtdtzyRMWe9IjhOe2pcJSyyRnbe0nMvRYKrcLOy+Pa0uBcENrzK/EEH8m3qqVrlhyR1nYpcESUciWNewVejdHeS8oAQHOWB5sXdLr7m5RBqlq/bT1TtdsddbbhHkDLC2sCoJ7cy5RXKRA+SaELljlEpHkgPDyaspe4IR+JnN7nc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="8b637c4e76d0c38644d853d5cae99f437aeae53c" Description="" Url=""><as:assemblyIdentity name="Chapter8_Ex5.exe" version="1.0.0.0" publicKeyToken="b7c61721567b41d3" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=INNIIT\Kuldip.Sagar</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>OEou76UXiYidHFisvCF8uAgCHok=</DigestValue></Reference></SignedInfo><SignatureValue>dSq6QFj8h8Sb79bhQ7igquYzAePZG4uBwM9udRX4Umm3CJPYK+ikdP+ekyr+LZTK6pdP5AjAU7O0nzyN3QjCFVfmnbtldLE7ALMqcIPgKOwdj14bxue2Np0QHK+kESD7BXu8aJut2tyY4goMFEH3LOGMPf0hMzb5RQ+7d/MBO5Y=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wtdtzyRMWe9IjhOe2pcJSyyRnbe0nMvRYKrcLOy+Pa0uBcENrzK/EEH8m3qqVrlhyR1nYpcESUciWNewVejdHeS8oAQHOWB5sXdLr7m5RBqlq/bT1TtdsddbbhHkDLC2sCoJ7cy5RXKRA+SaELljlEpHkgPDyaspe4IR+JnN7nc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUqgAwIBAgIQ4/tuEh7VaplIcH8BGUGLnDAJBgUrDgMCHQUAMDExLzAtBgNVBAMeJgBJAE4ATgBJAEkAVABcAEsAdQBsAGQAaQBwAC4AUwBhAGcAYQByMB4XDTA2MDgxNjExMjIwOVoXDTA3MDgxNjE3MjIwOVowMTEvMC0GA1UEAx4mAEkATgBOAEkASQBUAFwASwB1AGwAZABpAHAALgBTAGEAZwBhAHIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMLXbc8kTFnvSI4TntqXCUsskZ23tJzL0WCq3Czsvj2tLgXBDa8yvxBB/Jt6qla5YckdZ2KXBElHIljXsFXo3R3kvKAEBzlgebF3S6+5uUQapav209U7XbHXW24R5AywtrAqCe3MuUVykQPkmhC5Y5RKR5IDw8mrKXuCEfiZze53AgMBAAEwCQYFKw4DAh0FAAOBgQAyst0LllDO69v00abWPWptHh0Dt+BkIUcr9T/J0q2SWJNbhz/FKeMQWxI2+p1j82osVgFL6mvgJNcHi3jIdoMX+OFN41vaJq/LPXjG5PUM9XCHFoY4shkftv5LhwRo6d6neijg6/Y4Khf+m/2Zcx+uhtTaQeeGC2BfzEgSJMkf6g==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

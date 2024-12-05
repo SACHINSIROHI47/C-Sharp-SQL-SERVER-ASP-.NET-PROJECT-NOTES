@@ -1,0 +1,27 @@
+﻿html 
+{
+    background-color:Gray;
+    font:14px Georgia Sarif;
+}
+.content
+{
+    background-color:Green;
+}
+h1
+{
+    color:grey;
+}
+label
+{
+    font-weight:bold;
+   
+    background-color:Orange;
+}
+input
+{
+    background-color:Yellow;
+}
+.button
+{
+    background-color:Purple;
+}

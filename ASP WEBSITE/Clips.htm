@@ -1,0 +1,218 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>CHITRAKSHII INTERIORS - CATEGORIES</title>
+<style>
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.btn:hover {
+ 	background-color: #4CAF50;
+    color: white;
+}
+
+.next {
+	background-color: #ddd;
+    color: black;
+}
+</style>
+<script>
+/*which_image_loaded = 0;
+				NUMBER_OF_IMAGES = 10;
+				
+				ImageNames = new Array();
+				ImageNames.length = NUMBER_OF_IMAGES - 1;
+
+					for (counter = 0; counter < NUMBER_OF_IMAGES; counter++)
+					{
+				    file_number = counter + 1;
+				    filename = ("images/" + type + file_number + ".jpg");
+				    ImageNames[counter] = filename;
+					}
+		
+
+function changeImage(direction)
+				{
+				    which_image_loaded += direction;
+				    if (which_image_loaded < 0)
+				        which_image_loaded = NUMBER_OF_IMAGES - 1;
+				    if (which_image_loaded == NUMBER_OF_IMAGES)
+				        which_image_loaded = 0;
+				    document.bedroom.src = ImageNames[which_image_loaded];
+				}*/
+				
+				which_image_loaded = 0;
+				NUMBER_OF_IMAGES = 10;
+				
+				ImageNames = new Array();
+				ImageNames.length = NUMBER_OF_IMAGES - 1;
+				
+				function changeImage(type, direction)
+				{
+					for (counter = 0; counter < NUMBER_OF_IMAGES; counter++)
+					{
+				    file_number = counter + 1;
+				    filename = ("images/" + type + file_number + ".jpg");
+				    ImageNames[counter] = filename;
+					}
+					
+				    which_image_loaded += direction;
+				    if (which_image_loaded < 0)
+				        which_image_loaded = NUMBER_OF_IMAGES - 1;
+				    if (which_image_loaded == NUMBER_OF_IMAGES)
+				        which_image_loaded = 0;
+				    document.getElementById(type).src = ImageNames[which_image_loaded];
+				}
+				
+</script>
+</head>
+
+<body>
+
+<table border="0" width="100%" height="1309">
+<tr>
+		<td height="88" align="justify" background="images/HeadBack.jpg">
+		<font size="2" face="Algerian" color="#DF5900">
+		<img border="2" src="images/Chitrakshi.jpg" width="212" height="189" align="left" hspace="2"></font><font color="#DF5900"></b></font><p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><font face="Rockwell Extra Bold" size="6" color="#DF5900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+		<font face="Rockwell Extra Bold" size="7" color="#DF5900">
+		<marquee scrollamount="5" height="68" width="836" scrolldelay="85" style="font-family: Algerian; color: #663300; font-weight: bold ; ">WELCOME TO "&#2330;&#2367;&#2340;&#2381;&#2352;&#2366;kshii" INTERIORS</marquee></font></td>
+	</tr>
+<tr>
+<td height="35">
+		<table border="0" width="100%" height="30">
+			<tr>
+				<td align="center" width="16%" bgcolor="#99FF66"><b>
+				<font size="4" color="#000080" face="Bookman Old Style">
+				<a href="http://Home.htm">HOME</a></font></b></td>
+				<td align="center" width="207"  bgcolor="#99FF66" width="207"><b>
+				<font size="4" color="#000080" face="Bookman Old Style">
+				CATEGORIES</font></b></td>
+				<td align="center" width="16%"  bgcolor="#99FF66" width="184"><b>
+				<font size="4" color="#000080" face="Bookman Old Style">
+				<a href="WhyUs.htm">WHY US</a></font><a href="WhyUs.htm"><font face="Bookman Old Style" size="4" color="#FFFF99"> </font>
+				</a></b></td>
+				<td align="center" width="16%"  bgcolor="#99FF66" width="234"><b>
+				<font face="Bookman Old Style" size="4" color="#000080">
+				<a href="Package.htm">PACKAGES</a></font></b></td>
+				<td align="center" width="17%"  bgcolor="#99FF66" width="214"><b>
+				<font size="4" color="#000080" face="Bookman Old Style">
+				<a href="GetServed.htm">GET SERVED</a></font></b></td>
+				<td align="center" width="16%"  bgcolor="#008000" width="174"><b>
+				<font face="Bookman Old Style" size="4" color="#000080">
+				<a href="Clips.htm"><font color="#FFFF00">GALLERY</font></a></font></b></td>
+			</tr>
+		</table>
+</td>
+</tr>
+<tr>
+<td height="21" bgcolor="#008000">
+		&nbsp;</td>
+</tr>
+<tr>
+<td height="1030">
+<table border="0" width="100%" height="1023">
+	<tr>
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="bed" src="images/bed1.jpg" width="400" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo;Previous" onClick="changeImage('bed',-1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('bed',1)">
+		</form>	
+		</td>
+		
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="door" src="images/door1.jpg" width="400" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo; Previous" onClick=" changeImage('door', -1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('door',1)">
+		</form>		
+		</td>
+	</tr>
+	<tr>
+		<td height="26" width="42%" align="center" bgcolor="#FFFF00"><b>
+		<font size="4" face="Century">BEDROOM</font></b></td>
+		<td height="26" align="center" bgcolor="#FFFF00"><b>
+		<font size="4" face="Century">DOOR</font></b></td>
+
+	</tr>
+	<tr>
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="fab" src="images/fab1.jpg" width="400" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo; Previous" onClick="changeImage('fab',-1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('fab',1)">
+		</form>	
+		</td>
+		
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="patio" src="images/patio1.jpg" width="400" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo; Previous" onClick=" changeImage('patio', -1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('patio',1)">
+		</form>		
+		</td>
+	</tr>
+	<tr>
+		<td height="26" width="42%" align="center" bgcolor="#00FFFF"><b>
+		<font size="4" face="Century">HOME DESIGN</font></b></td>
+		<td height="26" width="42%" align="center" bgcolor="#00FFFF"><b>
+		<font size="4" face="Century">PATIO</font></b></td>
+
+	</tr>
+	<tr>
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="Stair" src="images/Stair1.jpg" width="350" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo; Previous" onClick="changeImage('Stair',-1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('Stair',1)">
+		</form>	
+		</td>
+		
+		<td height="300" width="42%" align="center" valign="top">
+		<p>
+		<img id="store" src="images/store1.jpg" width="400" height="250"></p>
+		<form>
+		<input  type="button" class="next btn" value="&laquo; Previous" onClick=" changeImage('store', -1)">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input  type="button"  class="next btn" value="Next &raquo;" onClick="changeImage('store',1)">
+		</form>		
+		</td>
+	</tr>
+	<tr>
+		<td height="26" width="42%" align="center" bgcolor="#FF00FF"><b>
+		<font size="4" face="Century">STAIRS</font></b></td>
+		<td height="26" width="42%" align="center" bgcolor="#FF00FF"><b>
+		<font size="4" face="Century">STORAGE</font></b></td>
+	</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#008000" align="right" height="15">
+<p class="MsoNormal" align="center"><font color="#FFFFFF" size="1">
+<span style="line-height: 115%; font-family: Arial,sans-serif">
+Copyright©2018 ChitrAkshii Interiors. All Rights Reserved.</span></font></td>
+</tr>
+</table>
+
+</body>
+
+</html>

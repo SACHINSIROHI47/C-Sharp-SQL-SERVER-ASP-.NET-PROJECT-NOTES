@@ -1,0 +1,1 @@
+SELECT * FROM Sales.SalesTerritory WHERE Name LIKE 'N%'

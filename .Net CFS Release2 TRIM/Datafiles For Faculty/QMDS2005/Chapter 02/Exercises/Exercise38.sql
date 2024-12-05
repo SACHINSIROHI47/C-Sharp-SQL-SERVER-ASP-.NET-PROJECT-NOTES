@@ -1,0 +1,1 @@
+SELECT SalesOrderID, OrderQty,UnitPrice, DENSE_RANK() OVER(ORDER BY UnitPrice ASC)AS RANK FROM Sales.SalesOrderDetail

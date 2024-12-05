@@ -1,0 +1,1 @@
+SELECT 'Order ID' = SalesOrderID, 'Total Due' = TotalDue FROM Sales.SalesOrderHeader ORDER BY TotalDue DESC

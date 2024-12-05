@@ -1,0 +1,1 @@
+SELECT Name, CountryRegionCode, SalesYTD FROM Sales.SalesTerritory WHERE TerritoryID = 1

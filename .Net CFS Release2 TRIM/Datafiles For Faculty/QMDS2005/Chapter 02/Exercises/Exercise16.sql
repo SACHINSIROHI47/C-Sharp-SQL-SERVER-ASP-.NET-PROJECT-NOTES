@@ -1,0 +1,1 @@
+SELECT * FROM Sales.SalesOrderHeader WHERE OnlineOrderFlag = 1

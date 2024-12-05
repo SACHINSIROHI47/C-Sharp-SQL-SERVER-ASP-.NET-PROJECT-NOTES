@@ -1,0 +1,2 @@
+CREATE UNIQUE NONCLUSTERED INDEX Idx_CustomerID
+ON Sales.Store(CustomerID)

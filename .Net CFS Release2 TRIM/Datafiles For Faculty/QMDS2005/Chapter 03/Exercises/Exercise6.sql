@@ -1,0 +1,1 @@
+SELECT SalesOrderID, 'Territory Name' = Name, OrderDate, Quarter = datepart (qq, OrderDate) FROM Sales.SalesOrderHeader s JOIN Sales.SalesTerritory t on s.TerritoryID = t.TerritoryID

@@ -1,0 +1,1 @@
+SELECT * FROM Sales.SalesOrderDetail where SpecialOfferID = (SELECT SpecialOfferID FROM Sales.SpecialOffer WHERE Type = 'No Discount')

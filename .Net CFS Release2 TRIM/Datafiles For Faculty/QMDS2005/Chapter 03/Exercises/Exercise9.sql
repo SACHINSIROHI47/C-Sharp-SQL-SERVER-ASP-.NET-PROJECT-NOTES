@@ -1,0 +1,1 @@
+SELECT 'Order Value' = 'The total amount due for the Sales Order ID: ' + CONVERT(Varchar(10),SalesOrderID) + ' is $' + CONVERT(Varchar(10), TotalDue) FROM Sales.SalesOrderHeader

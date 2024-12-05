@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE html 
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3c.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html>
+<head>
+<title>Welcome to XHTML</title>
+<style type="text/css">
+h1{color : red}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle1.css" />
+</head>
+
+<body language = "javascript>>
+<form>
+<fieldset>
+<br>
+Name : <input type = "text" name = "iname" value="Mr."><br><br>
+Address <input type = "text" name = "iaddress"><br><br>
+Age <input type = "text" name = "iages"><br><br>
+</fieldset>
+<br><br>
+Education Details<input type = "textarea" name = "ieduaction" style="width=200;height=50"><br><br>
+Gender <br>
+Male : <input type = "radio" name = "imale"><br>
+FeMale : <input type = "radio" name = "ifemale"><br><br>
+Graduate :
+<input type = "checkbox" name = "igraduate"><br><br>
+Country : 
+<select>
+<option value="IN">INDIA
+<option value="US">USA
+<option value="JA">JAPAN
+<option value="UA">UAE
+<option value="CH">CHINA
+<option value="BR">BRITAIN
+</select>
+<br><br>
+<p align="left">
+<input type = "reset" name = "ireset" value="Click here to Reset">
+</p>
+<br>
+<p align="right">
+<input type = "submit" name = "isubmit" value="Click here to Save"
+style="height=150;width=160; font-weight : bold; BACKGROUND-IMAGE:URL(E:\MEENU\XHTML\EVTMGMT.GIF)"
+onclick = "onsubmit()">
+</p>
+</center>
+<script>
+function onsubmit()
+{
+	
+	var num1 = 99
+	if(num1==100)
+	{
+		alert("Number  is 100")
+	}
+	else if(num1>100)
+	{
+		alert("Number  is greater than 100")
+	}
+	else if(num1<100)
+	{
+		alert("Number  is less than 100")
+	}
+	else if(num1>=100)
+	{
+		alert("Number  is greater than equal to 100")
+	}
+	else if(num1<=100)
+	{
+		alert("Number  is less than equal to 100")
+	}
+	else if(num1!=100)
+	{
+		alert("Number  is not equal to 100")
+	}
+	else
+	{
+		alert("Number  is not equal to 100")
+	}
+
+		
+}
+
+</script>
+</form>
+
+</body>
+</html>

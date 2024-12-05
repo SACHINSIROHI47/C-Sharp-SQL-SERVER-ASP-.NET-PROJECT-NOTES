@@ -1,0 +1,21 @@
+Create procedure dbmail_longrunningquery As Begin
+  -- Created by Dhiraj Singh Bhandari  DECLARE @EmailSubject varchar(100),
+   @TextTitle varchar(100), @TableHTML nvarchar(max), @Body nvarchar(max) 
+   SET @EmailSubject = 'TOP 10 LONG RUNNING QUERIES' SET @TextT
+itle = 'TOP 10 LONG RUNNING QUERIES' SET @TableHTML = '<html>'+ '<head>
+<style>'+ -- Data cells styles / font size etc 'td {border:1px solid #ddd;padding-left:5px;padding-right:5px;padding-top:1px;padding-bottom:1px;font-size:10pt}'+ '</style></head>'+ '<b
+ody>'+ -- TextTitle style '<div style="margin-top:15px; margin-left:15px; margin-bottom:15px; font-weight:bold; font-size:13pt; font-family:calibri;">' + @TextTitle +'</div>' + -- Color and columns names '<div style="font-family:Calibri; "><table>'+'<tr b
+gcolor=#00881d>'+ '<td align=left><font face="calibri" color=White><b>SPID</b></font></td>'+ -- SPID '<td align=left><font face="calibri" color=White><b>STATUS</b></font></td>'+ -- STATUS '<td align=left><font face="calibri" color=White><b>Login_Name</b><
+/font></td>'+ -- Login '<td align=left><font face="calibri" color=White><b>Host</b></font></td>'+ -- Host '<td align=left><font face="calibri" color=White><b>DBName</b></font></td>'+ -- DBName '<td align=left><font face="calibri" color=White><b>CommandTyp
+e</b></font></td>'+ -- CommandType '<td align=left><font face="calibri" color=White><b>Logical_Reads</b></font></td>'+  -- logical_reads '<td align=left><font face="calibri" color=White><b>Writes</b></font></td>'+ -- writes '<td align=left><font face="cal
+ibri" color=White><b>CPUTime_Sec</b></fonhht></td>'+ -- Total CPU Time_Sec '<td align=left><font face="calibri" color=White><b>StartTime</b></font></td>'+ -- StartTime '<td align=left><font face="calibri" color=White><b>TimeElapsed</b></font></td>'+ --  Tim
+eElapsed '<td align=left><font face="calibri" color=White><b>SQLStatement</b></font></td>'+ -- SQLStatement '</tr></div>' -------------------------------------------------------------------------------------------------------------------------------------
+ ----- Querying stats for long running queries from aggregated performance statistics (cached query plans) -------- ------------------------------------------------------------------------------------------------------------------------------------- SET T
+RANSACTION ISOLATION LEVEL READ UNCOMMITTED; WITH XMLNAMESPACES (DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/showplan'), LongRunningQueries AS ( SELECT TOP 10 SPID = er.session_id,         STATUS = ses.STATUS,         Login_Name = ses.login_na
+me,         Host = ses.host_name,          DBName = DB_NAME(er.database_id),         CommandType = er.command,     Logical_Reads = er.logical_reads,     Writes = er.writes,          CPUTime_Sec = er.cpu_time/1000000.00,         StartTime = er.start_time, 
+        TimeElapsed = CAST(GETDATE() - er.start_time AS TIME),         SQLStatement = st.text FROM sys.dm_exec_requests er      OUTER APPLY sys.dm_exec_sql_text(er.sql_handle) st      CROSS APPLY sys.dm_exec_query_plan(er.plan_handle) AS QP      LEFT JOIN
+ sys.dm_exec_sessions ses ON ses.session_id = er.session_id      LEFT JOIN sys.dm_exec_connections con ON con.session_id = ses.session_id WHERE st.text IS NOT NULL ORDER BY er.cpu_time DESC)  ---------------------------------------------------------- ----
+------------------------------------------------------ SELECT @Body =( SELECT td = SPID, td = STATUS, td = Login_Name, td = Host, td = DBName, td = CommandType, td = Logical_Reads, td = Writes,   td = CONVERT(NVARCHAR(40), CPUTime_Sec, 100),  td = CONVERT
+(NVARCHAR(40), StartTime, 100),  td = TimeElapsed,  td = SQLStatement  FROM LongRunningQueries ORDER BY CONVERT(DECIMAL(16,2), CPUTime_Sec) desc for XML raw('tr'), elements) SET @Body = REPLACE(@Body, '<td>', '<td align=left><font face="calibri">') SET @T
+ableHTML = @TableHTML + @Body + '</table></div></body></html>' SET @TableHTML = '<div style="color:Black; font-size:8pt; font-family:Calibri; width:auto;">' + @TableHTML + '</div>' ------------------------------- ----- Sending email -------- -------------
+------------------ exec msdb.dbo.sp_send_dbmail @Profile_name = 'DBAAlerts', @Recipients = 'dhiraj.bhandari@serviceking.com', @Body = @TableHTML, @Subject = @EmailSubject, @Body_format = 'HTML'  End

@@ -1,0 +1,624 @@
+<%@ Page Language="C#" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="System.Data.SqlTypes" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        String strUser, strCo, strName, strPack,strMob, strCountry, strState, strCity, strAdd;
+        strUser = ddlUserType.SelectedItem.Text;
+        strCo = txtCo.Text;
+        strName = txtName.Text;
+        strPack = ddlPackage.SelectedItem.Text;
+        strMob = txtMob.Text;
+        strCountry = ddlCountry.Text;
+        strState = txtState.Text;
+        strCity = txtCity.Text;
+        strAdd = txtAdd.Text;
+        
+        try
+        {
+            SqlConnection con2 = new SqlConnection();
+            con2.ConnectionString = "Data Source = SONY-PC\\SQLEXPRESS; Initial Catalog = INTERIORS; User Id = sa; Password =sqlserver";
+            con2.Open();
+            String strQuery2 = "Insert CUSTOMER(CUST_TYPE,CO_NAME,CUST_NAME,PACKAGE,MOBILE,COUNTRY,STATE,CITY,ADDRESS) VALUES (@type,@co,@name,@pack,@mob,@country,@state,@city,@add)";
+            SqlCommand cmd2 = new SqlCommand(strQuery2, con2);
+
+            SqlParameter ptrUser = new SqlParameter("@type", strUser);
+            cmd2.Parameters.Add(ptrUser);
+            
+            SqlParameter ptrCo = new SqlParameter("@co", strCo);
+            cmd2.Parameters.Add(ptrCo);
+            
+            SqlParameter ptrName = new SqlParameter("@name", strName);
+            cmd2.Parameters.Add(ptrName);
+
+            SqlParameter ptrPack = new SqlParameter("@pack", strPack);
+            cmd2.Parameters.Add(ptrPack);
+
+            SqlParameter ptrMob = new SqlParameter("@mob", strMob);
+            cmd2.Parameters.Add(ptrMob);
+
+            SqlParameter ptrCountry = new SqlParameter("@country", strCountry);
+            cmd2.Parameters.Add(ptrCountry);
+
+            SqlParameter ptrState = new SqlParameter("@state", strState);
+            cmd2.Parameters.Add(ptrState);
+
+            SqlParameter ptrCity = new SqlParameter("@city", strCity);
+            cmd2.Parameters.Add(ptrCity);
+
+            SqlParameter ptrAdd = new SqlParameter("@add", strAdd);
+            cmd2.Parameters.Add(ptrAdd);
+            
+            cmd2.ExecuteNonQuery();
+            con2.Close();
+        }
+        catch (Exception e2)
+        {
+            MessageBox.Show("Error occurred :" + e2.Message);
+        }
+        MessageBox.Show("User Created", "Sucessfully saved");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+<style type="text/css">
+        #form {
+        align="left";
+        valign="top";
+        height= "30"
+        }
+       #btnSubmit {
+		border-radius: 100%;
+		background-color: #9DE0AD;
+		color: #008800;
+		text-align: center;
+		font-weight: bold;
+		font-size: 2em;
+		border: 4px solid #008800;
+		box-shadow: 5px 5px 5px #888;
+		display: inline-block;
+		margin-right: 20px;
+	    }
+	
+	    #btnClear {
+		background-color: #eee;
+		border-radius: 2px;
+		color: #CC0000;
+		font-family: Verdana, Arial, sans-serif;
+		text-align: center;
+		font-weight: bold;
+		font-size: 2.5em;
+		border: 4px solid #CC0000;
+		box-shadow: 5px 5px 5px #888;
+		display: inline-block;
+		position: relative;
+		margin-right: 20px;
+        top: 0px;
+        left: 9px;
+        width: 64px;
+    }		
+		.style1
+		{
+		border-collapse : collapse ; 
+		
+		}
+    </style>
+
+</head>
+
+   <body topmargin="10" leftmargin="10" rightmargin="10" bottommargin="10">
+
+
+
+       <form id="form1" runat="server">
+
+
+
+<table border="0" width="100%" height="769" cellspacing="4">
+	<tr>
+		<td height="173" background="images/HeadBack.jpg">
+		<font face="Algerian" color="#DF5900">
+		<img border="2" src="images/Chitrakshi.jpg" width="190" height="165" align="left" hspace="2"></font><font color="#DF5900"></b></font><font face="Rockwell Extra Bold" color="#DF5900"> </font>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><font face="Rockwell Extra Bold" size="6" color="#DF5900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+		<font face="Rockwell Extra Bold" size="7" color="#DF5900">
+		<marquee scrollamount="5" width="868" scrolldelay="85" 
+                style="font-family: Algerian; color: #663300; font-weight: bold; height: 63px;">WELCOME TO "&#2330;&#2367;&#2340;&#2381;&#2352;&#2366;kshii" INTERIORS</marquee></font></td>
+	</tr>
+	<tr>
+		<td align="left" valign="top" height="27">
+		<table border="0" width="100%" height="25">
+			<tr>
+				<td align="center" bgcolor="#99FF66" width="16%" height="20"><b>
+				<font color="#000080" face="Bookman Old Style">
+				<a href="http://Home.htm">HOME</a></font></b></td>
+				<td align="center" bgcolor="#99FF66" width="16%" height="20"><b>
+				<font color="#000080" face="Bookman Old Style">
+				<a href="Category.htm">CATEGORIES</a></font></b></td>
+				<td align="center" bgcolor="#99FF66" width="16%" height="20"><b>
+				<font color="#000080" face="Bookman Old Style">
+				<a href="WhyUs.htm">WHY US</a></font><a href="WhyUs.htm"><font face="Bookman Old Style" color="#FFFF99"> </font>
+				</a></b></td>
+				<td align="center" bgcolor="#99FF66" width="16%" height="20"><b>
+				<font color="#000080" face="Bookman Old Style">
+				<a href="Package.htm">PACKAGES</a></font></b></td>
+				<td align="center" bgcolor="#008000" width="17%" height="20"><b>
+				<font color="#FFFF99" face="Bookman Old Style">GET SERVED</font></b></td>
+				<td align="center" bgcolor="#99FF66" width="16%" height="20"><b>
+				<font face="Bookman Old Style" color="#000080">
+				<a href="Clips.htm">GALLERY</a></font></b></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<td align="left" valign="top" height="21" bgcolor="#008000">
+		&nbsp;</td>
+	</tr>
+	
+	
+	<tr>
+		<td align="left" valign="top" height="528">
+		
+		<table border="0" width="100%" height="526" cellspacing="4">
+			<tr>
+				<td width="40%" align="left" valign="top" height="520" background="images/get.gif">
+				<p align="center">&nbsp;
+				<marquee direction="up" scrollamount="5" scrolldelay="80" width="410" 
+                            style="height: 515; width:410">
+				
+				<img border="0" src="images/get5.jpg" width="256" height="350"><img border="0" src="images/get4.jpg" width="406" height="350"><img border="0" src="images/get7.jpg" width="350" height="350"><img border="0" src="images/get3.jpg" width="272" height="350"><img border="0" src="images/get2.jpg" width="350" height="350"><img border="0" src="images/get1.jpg" width="235" height="350"><img border="0" src="images/get6.jpg" width="349" height="350"></td>
+				</marquee>
+                </p>
+				<td width="60%" align="left" valign="top" height="501">
+				  			
+
+                <table class="style1" border = "0" width="100%" style="height: 600px">
+                    <tr>
+                        <td align="left" valign="top" colspan="4" class="style2" width="100%">
+                            <img border="0" src="images/Contact.jpg" width="100%" height="158"></td>
+                    </tr>
+                     <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg" 
+                             class="style1">
+                            </td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" 
+                             class="style1">
+                            </td>
+                        <td align="left" valign="top" width="66%" bgcolor="#6DB1FC" 
+                             background="images/getBack.jpg" class="style1" colspan="2">
+                            </td>
+                    </tr>
+                     <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label1">Select User Type</span> </font>
+							</b>
+                        </td>
+                        <td align="left" valign="middle" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                                <asp:DropDownList ID="ddlUserType" runat="server" Height="30px" 
+                                Width="165px">
+                                    <asp:ListItem>Individual- Home</asp:ListItem>
+                                    <asp:ListItem>Individual- Office</asp:ListItem>
+                                    <asp:ListItem>Company</asp:ListItem>
+                                </asp:DropDownList> 
+                            </font>
+
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" valign="middle" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" valign="middle" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label2">Company Name</span> </font></b>
+                        </td>
+                        <td align="left" valign="middle" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                                <asp:TextBox ID="txtCo" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            </font>
+                            <font face="Bookman Old Style">&nbsp;<font color="#CC0000">&nbsp;
+                            <asp:RequiredFieldValidator 
+                                ID="reqCo" runat="server" ControlToValidate="txtCo" 
+                                Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                                ErrorMessage="Enter Company Name">
+                            </asp:RequiredFieldValidator>
+                            </font>
+                            </font></td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" valign="middle" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label3">Contact Name</span> </font></b>
+                        </td>
+                        <td align="left" valign="middle" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                            <asp:TextBox ID="txtName" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            </font>
+                            &nbsp;&nbsp;&nbsp;<font color="#CC0000" face="Bookman Old Style"><asp:RequiredFieldValidator 
+                                ID="reqName" runat="server" ControlToValidate="txtName" 
+                                Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                                ErrorMessage="Enter Contact Name">
+                            </asp:RequiredFieldValidator>
+                            </font></td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="style2" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" class="style2" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">Choose Package</font></b></td>
+                        <td align="left" valign="top" class="style2" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                             <font size="3" face="Bookman Old Style">
+                                 <asp:DropDownList ID="ddlPackage" runat="server" Height="30px" 
+                                 Width="165px">
+                                     <asp:ListItem>1 HOUR</asp:ListItem>
+                                     <asp:ListItem>10 HOURS</asp:ListItem>
+                                     <asp:ListItem>15 HOURS</asp:ListItem>
+                                     <asp:ListItem>20 HOURS</asp:ListItem>
+                                     <asp:ListItem>30 HOURS</asp:ListItem>
+                                     <asp:ListItem>MONTHLY</asp:ListItem>
+                                 </asp:DropDownList>   
+                        </td>
+              </tr>
+
+              <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label10">Mobile</span> </font></b>
+                        </td>
+                        <td align="left" valign="top" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                            <asp:TextBox ID="txtMob" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            &nbsp;
+                            </font>
+                            <font color="#CC0000" face="Bookman Old Style">
+                            &nbsp;<asp:RequiredFieldValidator 
+                                ID="reqMob" runat="server" ControlToValidate="txtMob" 
+                                Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                                ErrorMessage="Enter Mobile Number"></asp:RequiredFieldValidator>
+                            </font></td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label14">Country</span> </font></b>
+                        </td>
+                        <td align="left" valign="top" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                            <select name="ddlCountry" id="ddlCountry" style="height:26;width:164px;">
+	<option value="Afghanistan">Afghanistan</option>
+	<option value="Albania">Albania</option>
+	<option value="Algeria">Algeria</option>
+	<option value="Andorra">Andorra</option>
+	<option value="Angola">Angola</option>
+	<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+	<option value="Argentina">Argentina</option>
+	<option value="Armenia">Armenia</option>
+	<option value="Australia">Australia</option>
+	<option value="Austria">Austria</option>
+	<option value="Azerbaijan">Azerbaijan</option>
+	<option value="Bahamas">Bahamas</option>
+	<option value="Bahrain">Bahrain</option>
+	<option value="Bangladesh">Bangladesh</option>
+	<option value="Barbados">Barbados</option>
+	<option value="Belarus">Belarus</option>
+	<option value="Belgium">Belgium</option>
+	<option value="Belize">Belize</option>
+	<option value="Benin">Benin</option>
+	<option value="Bhutan">Bhutan</option>
+	<option value="Bolivia">Bolivia</option>
+	<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+	<option value="Botswana">Botswana</option>
+	<option value="Brazil">Brazil</option>
+	<option value="Brunei">Brunei</option>
+	<option value="Bulgaria">Bulgaria</option>
+	<option value="Burkina Faso">Burkina Faso</option>
+	<option value="Burundi">Burundi</option>
+	<option value="Cabo Verde">Cabo Verde</option>
+	<option value="Cambodia">Cambodia</option>
+	<option value="Cameroon">Cameroon</option>
+	<option value="Canada">Canada</option>
+	<option value="Central African Republic">Central African Republic</option>
+	<option value="Chad">Chad</option>
+	<option value="Chile">Chile</option>
+	<option value="China">China</option>
+	<option value="Colombia">Colombia</option>
+	<option value="Comoros">Comoros</option>
+	<option value="Congo, Republic of the">Congo, Republic of the</option>
+	<option value="Congo, Democratic Republic of the">Congo, Democratic Republic 
+	of the</option>
+	<option value="Costa Rica">Costa Rica</option>
+	<option value="Cote d&#39;Ivoire">Cote d'Ivoire</option>
+	<option value="Croatia">Croatia</option>
+	<option value="Cuba">Cuba</option>
+	<option value="Cyprus">Cyprus</option>
+	<option value="Czech Republic">Czech Republic</option>
+	<option value="Denmark">Denmark</option>
+	<option value="Djibouti">Djibouti</option>
+	<option value="Dominica">Dominica</option>
+	<option value="Dominican Republic">Dominican Republic</option>
+	<option value="Ecuador">Ecuador</option>
+	<option value="Egypt">Egypt</option>
+	<option value="El Salvador">El Salvador</option>
+	<option value="Equatorial Guinea">Equatorial Guinea</option>
+	<option value="Eritrea">Eritrea</option>
+	<option value="Estonia">Estonia</option>
+	<option value="Ethiopia">Ethiopia</option>
+	<option value="Fiji">Fiji</option>
+	<option value="Finland">Finland</option>
+	<option value="France">France</option>
+	<option value="Gabon">Gabon</option>
+	<option value="Gambia">Gambia</option>
+	<option value="Georgia">Georgia</option>
+	<option value="Germany">Germany</option>
+	<option value="Ghana">Ghana</option>
+	<option value="Greece">Greece</option>
+	<option value="Grenada">Grenada</option>
+	<option value="Guatemala">Guatemala</option>
+	<option value="Guinea">Guinea</option>
+	<option value="Guinea-Bissau">Guinea-Bissau</option>
+	<option value="Guyana">Guyana</option>
+	<option value="Haiti">Haiti</option>
+	<option value="Honduras">Honduras</option>
+	<option value="Hungary">Hungary</option>
+	<option value="Iceland">Iceland</option>
+	<option value="India">India</option>
+	<option value="Indonesia">Indonesia</option>
+	<option value="Iran">Iran</option>
+	<option value="Iraq">Iraq</option>
+	<option value="Ireland">Ireland</option>
+	<option value="Israel">Israel</option>
+	<option value="Italy">Italy</option>
+	<option value="Jamaica">Jamaica</option>
+	<option value="Japan">Japan</option>
+	<option value="Jordan">Jordan</option>
+	<option value="Kazakhstan">Kazakhstan</option>
+	<option value="Kenya">Kenya</option>
+	<option value=""></option>
+	<option value="Kosovo">Kosovo</option>
+	<option value="Kuwait">Kuwait</option>
+	<option value="Kyrgyzstan">Kyrgyzstan</option>
+	<option value="Laos">Laos</option>
+	<option value="Latvia">Latvia</option>
+	<option value="Lebanon">Lebanon</option>
+	<option value="Lesotho">Lesotho</option>
+	<option value="Liberia">Liberia</option>
+	<option value="Libya">Libya</option>
+	<option value="Liechtenstein">Liechtenstein</option>
+	<option value="Lithuania">Lithuania</option>
+	<option value="Luxembourg">Luxembourg</option>
+	<option value="Macedonia">Macedonia</option>
+	<option value="Madagascar">Madagascar</option>
+	<option value="Malawi">Malawi</option>
+	<option value="Malaysia">Malaysia</option>
+	<option value="Maldives">Maldives</option>
+	<option value="Mali">Mali</option>
+	<option value="Malta">Malta</option>
+	<option value="Marshall Islands">Marshall Islands</option>
+	<option value="Mauritania">Mauritania</option>
+	<option value="Mauritius">Mauritius</option>
+	<option value="Mexico">Mexico</option>
+	<option value="Micronesia">Micronesia</option>
+	<option value="Moldova">Moldova</option>
+	<option value="Monaco">Monaco</option>
+	<option value="Mongolia">Mongolia</option>
+	<option value="Montenegro">Montenegro</option>
+	<option value="Morocco">Morocco</option>
+	<option value=" Mozambique"> Mozambique</option>
+	<option value="Myanmar (Burma)">Myanmar (Burma)</option>
+	<option value="Namibia">Namibia</option>
+	<option value="Nauru">Nauru</option>
+	<option value="Nepal">Nepal</option>
+	<option value="Netherlands">Netherlands</option>
+	<option value="New Zealand">New Zealand</option>
+	<option value="Nicaragua">Nicaragua</option>
+	<option value="Niger">Niger</option>
+	<option value="Nigeria">Nigeria</option>
+	<option value="North Korea">North Korea</option>
+	<option value="Norway">Norway</option>
+	<option value="Oman">Oman</option>
+	<option value="Pakistan">Pakistan</option>
+	<option value="Palau">Palau</option>
+	<option value="Palestine">Palestine</option>
+	<option value="Panama">Panama</option>
+	<option value="Papua New Guinea">Papua New Guinea</option>
+	<option value="Paraguay">Paraguay</option>
+	<option value="Peru">Peru</option>
+	<option value="Philippines">Philippines</option>
+	<option value="Poland">Poland</option>
+	<option value="Portugal">Portugal</option>
+	<option value="Qatar">Qatar</option>
+	<option value="Romania">Romania</option>
+	<option value="Russia">Russia</option>
+	<option value="Rwanda">Rwanda</option>
+	<option value="St. Kitts and Nevis">St. Kitts and Nevis</option>
+	<option value="St. Lucia">St. Lucia</option>
+	<option value="St. Vincent and The Grenadines">St. Vincent and The 
+	Grenadines</option>
+	<option value="Samoa">Samoa</option>
+	<option value="San Marino">San Marino</option>
+	<option value=" Tome and Principe"> Tome and Principe</option>
+	<option value="Saudi Arabia">Saudi Arabia</option>
+	<option value="Senegal">Senegal</option>
+	<option value="Serbia">Serbia</option>
+	<option value="Seychelles">Seychelles</option>
+	<option value="Sierra Leone">Sierra Leone</option>
+	<option value="Singapore">Singapore</option>
+	<option value="Slovakia">Slovakia</option>
+	<option value="Slovenia">Slovenia</option>
+	<option value="Solomon Islands">Solomon Islands</option>
+	<option value="Somalia">Somalia</option>
+	<option value="South Africa">South Africa</option>
+	<option value="South Korea">South Korea</option>
+	<option value="South Sudan">South Sudan</option>
+	<option value="Spain">Spain</option>
+	<option value="Sri Lanka">Sri Lanka</option>
+	<option value="Sudan">Sudan</option>
+	<option value="Suriname">Suriname</option>
+	<option value="Swaziland">Swaziland</option>
+	<option value="Sweden">Sweden</option>
+	<option value="Switzerland">Switzerland</option>
+	<option value="Syria">Syria</option>
+	<option value="Taiwan">Taiwan</option>
+	<option value="Tajikistan">Tajikistan</option>
+	<option value="Tanzania">Tanzania</option>
+	<option value="Thailand">Thailand</option>
+	<option value="imor-Leste">imor-Leste</option>
+	<option value="Togo">Togo</option>
+	<option value="Tonga">Tonga</option>
+	<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+	<option value="Tunisia">Tunisia</option>
+	<option value="Turkey">Turkey</option>
+	<option value="Turkmenistan">Turkmenistan</option>
+	<option value="Tuvalu">Tuvalu</option>
+	<option value="Uganda">Uganda</option>
+	<option value="Ukraine">Ukraine</option>
+	<option value="United Arab Emirates">United Arab Emirates</option>
+	<option value="United Kingdom (UK)">United Kingdom (UK)</option>
+	<option value="United States of America (USA)">United States of America(USA)</option>
+	<option value="Uruguay">Uruguay</option>
+	<option value="Uzbekistan">Uzbekistan</option>
+	<option value="Vanuatu">Vanuatu</option>
+	<option value="Vatican City (Holy See)">Vatican City (Holy See)</option>
+	<option value="Venezuela">Venezuela</option>
+	<option value="Vietnam">Vietnam</option>
+	<option value="Yemen">Yemen</option>
+	<option value="Zambia">Zambia</option>
+	<option value="Zimbabwe">Zimbabwe</option>
+
+</select></font></td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label15">State</span> </font></b>
+                        </td>
+                        <td align="left" valign="middle" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                                <asp:TextBox ID="txtState" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            </font>
+                             <font face="Bookman Old Style">&nbsp;&nbsp;
+                            <font color="#CC0000" face="Bookman Old Style" size="3">
+                        <asp:RequiredFieldValidator 
+                           ID="reqState" runat="server" ControlToValidate="txtState" 
+                           Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                           ErrorMessage="Enter State"></asp:RequiredFieldValidator>
+                    </font>
+                        		</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label16">City</span> </font></b>
+                        </td>
+                        <td align="left" valign="top" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                                <asp:TextBox ID="txtCity" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            <font color="#CC0000" face="Bookman Old Style" size="3">&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator 
+                           ID="reqCity" runat="server" ControlToValidate="txtCity" 
+                           Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                           ErrorMessage="Enter City"></asp:RequiredFieldValidator>
+                    </font>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;</td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="40">
+                            <b>
+							<font face="Bookman Old Style" color="#003300" size="4">
+							<span id="Label13">Address</span> </font></b>
+                        </td>
+                        <td align="left" valign="middle" width="66%" bgcolor="#6DB1FC" background="images/getBack.jpg" colspan="2">
+                            <font size="3" face="Bookman Old Style">
+                                <asp:TextBox ID="txtAdd" runat="server" Width="165px" Height="25px"></asp:TextBox>
+                            <font color="#CC0000" face="Bookman Old Style" size="3">&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator 
+                           ID="reqAdd" runat="server" ControlToValidate="txtAdd" 
+                           Font-Bold="True" ForeColor="Red" Font-Size="Large" 
+                           ErrorMessage="Enter Address"></asp:RequiredFieldValidator>
+                    </font>
+                            </font>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="10%" bgcolor="#6DB1FC" background="images/getBack.jpg" height="29">&nbsp;
+                       </td>
+                       </td>
+                        <td align="left" width="23%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            &nbsp;
+                            <asp:Button ID="btnSubmit" runat="server" CssClass="green" Font-Bold="True" 
+                                Font-Size="X-Large" Text="&#10003;" Width="50px" 
+                                onclick="btnSubmit_Click" />
+                        </td>
+                        <td align="right" valign="middle" width="44%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            <p align="center">&nbsp;</td>
+                        <td align="right" valign="middle" width="22%" bgcolor="#6DB1FC" background="images/getBack.jpg">
+                            <asp:Button 
+                                ID="btnClear" runat="server" CssClass="red" Font-Bold="True" Font-Size="X-Large" 
+                                Text="X" Width="75px" />
+                            </td>
+                    </tr>
+                  </table>
+    
+    			</td>
+			</tr>
+			<tr>
+				<td width="99%" align="left" valign="top" colspan="2" bgcolor="#008000" height="13">
+				<p align="center"><font color="#FFFFFF" size="1">
+		<span style="line-height: 115%; font-family: Arial,sans-serif">
+		Copyright©2018 ChitrAkshii Interiors. All Rights Reserved.</span></font></td>
+			</tr>
+		</table>
+		
+		</td>
+	</tr>
+	</table>
+
+
+       </form>
+
+
+</body>
+
+</html>

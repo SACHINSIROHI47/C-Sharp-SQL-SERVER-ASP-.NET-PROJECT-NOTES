@@ -1,0 +1,1 @@
+SELECT DISTINCT CardType FROM Sales.CreditCard

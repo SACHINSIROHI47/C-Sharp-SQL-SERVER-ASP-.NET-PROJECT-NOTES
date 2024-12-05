@@ -1,0 +1,34 @@
+﻿html
+{
+    background-color:Lime;
+}
+#di3
+{
+    position:absolute;
+ 
+    width:25%;
+    background-color:Blue;
+    padding:10px;
+    margin:15px;
+}
+#div2
+{
+     position:absolute;
+  
+    width:25%;
+    background-color:Aqua;
+     padding:10px;
+    margin:15px;
+    top: 165px;
+    left: 395px;
+}
+#div1
+{
+     position:absolute;
+    width:25%;
+    background-color:Navy;
+     padding:10px;
+    margin:15px;
+    top: 64px;
+    left: 142px;
+}

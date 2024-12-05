@@ -1,0 +1,61 @@
+﻿.Header
+{
+	  color:White;
+      background-color:Black;
+      border-left: solid 1px #525252;
+      font-size: 0.9em; 
+}
+.Alternating 
+{
+	 padding: 2px;
+      border: solid 1px #c1c1c1;
+      color:White;
+      background-color:Maroon; 
+}
+
+/* the style for the table headers */
+.Professional th
+{
+	  color:White;
+      background-color:Navy;
+      border-left: solid 1px #525252;
+      font-size: 0.9em; 
+}
+/* the style for the normal table cells */
+.Professional td
+{
+     padding: 2px;
+      border: solid 1px #c1c1c1;
+      color:White;
+      background-color:Teal; 
+}
+
+/* the style for the table headers */
+.Colorful th  
+{
+      padding : 4px 2px;
+      color:White;
+      background-color:Blue;
+      border-left: solid 1px #525252;
+      font-size: 0.9em; 
+ }
+.Colorful tr:nth-child(even)
+{
+      padding: 2px;
+      border: solid 1px #c1c1c1;
+      color:White;
+      background-color:Green; 
+}
+.Colorful tr:nth-child(odd)
+{
+      padding: 2px;
+      border: solid 1px #c1c1c1;
+      color:White;
+      background-color:Orange; 
+}
+.Colorful td
+ {
+        padding-left:10px;
+ }
+
+ 

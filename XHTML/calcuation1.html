@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE html 
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3c.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html>
+<head>
+<title>Welcome to XHTML with JAVASCRIPT</title>
+
+</head>
+<body bgcolor="orange">
+
+<form name="calc">
+NUMBER1 : <input type="text" name="text1"><br><br>
+
+
+<input type="button" value="Show" onClick="Validate(calc)">
+</form>
+
+<script language="JavaScript">
+
+function Validate(calc)
+{
+   if(calc.text1.value == "")
+   {
+     	 alert("Enter Number");
+	exit
+   }
+	
+    var num1 = calc.text1.value
+   alert("Your Number is " + num1)  
+    
+}
+</script>
+
+</body>
+</html>
+
+
+

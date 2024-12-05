@@ -1,0 +1,1 @@
+SELECT CustomerID, Name = LEFT(Name, 15), SalesPersonID FROM Sales.Store

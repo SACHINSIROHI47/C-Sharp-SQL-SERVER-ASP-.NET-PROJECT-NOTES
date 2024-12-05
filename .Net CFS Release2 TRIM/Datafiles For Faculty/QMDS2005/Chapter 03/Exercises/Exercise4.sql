@@ -1,0 +1,1 @@
+SELECT 'Sales Person ID' = SalesPersonID, 'Territory Name' = Name FROM Sales.SalesPerson LEFT OUTER JOIN Sales.SalesTerritory ON SalesPerson.TerritoryID = SalesTerritory.TerritoryID

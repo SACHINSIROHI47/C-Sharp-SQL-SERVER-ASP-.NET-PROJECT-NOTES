@@ -1,0 +1,1 @@
+SELECT OrderDate, SUM(TotalDue) FROM Sales.SalesOrderHeader GROUP BY OrderDate

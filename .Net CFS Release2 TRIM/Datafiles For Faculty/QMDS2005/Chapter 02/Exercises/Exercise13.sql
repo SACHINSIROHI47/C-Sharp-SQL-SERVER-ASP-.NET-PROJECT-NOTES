@@ -1,0 +1,1 @@
+SELECT * FROM Sales.CreditCard WHERE CardType = 'Vista' AND ExpYear = '2006'

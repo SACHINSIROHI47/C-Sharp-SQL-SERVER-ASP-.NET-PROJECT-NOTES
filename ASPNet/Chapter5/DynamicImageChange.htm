@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Demo</title>
+</head>
+<body onload="startTime();">
+<img id="img1" style="width: 255px; height: 166px" />
+<script type="text/javascript">
+var imgArray = new Array("images/image1.jpg","images/image2.jpg","images/image3.jpg");
+var imgCount = 0;
+function startTime() {
+    if(imgCount == imgArray.length) {
+        imgCount = 0;
+    }
+    document.getElementById("img1").src = imgArray[imgCount];
+    imgCount++;
+    setTimeout("startTime()", 5000);
+}
+</script>
+</body>
+</html>

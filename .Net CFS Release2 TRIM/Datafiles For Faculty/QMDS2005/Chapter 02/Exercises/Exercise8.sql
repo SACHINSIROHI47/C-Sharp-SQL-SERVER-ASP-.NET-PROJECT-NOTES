@@ -1,0 +1,2 @@
+SELECT * FROM Sales.SalesOrderDetail 
+WHERE LineTotal BETWEEN 2000 AND 2100

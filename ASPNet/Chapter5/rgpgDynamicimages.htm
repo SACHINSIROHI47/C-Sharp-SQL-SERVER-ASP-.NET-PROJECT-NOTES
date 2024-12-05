@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript" r>
+
+function runSlideShow()
+{
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 3000;
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3000;
+// Specify the image files
+var Pic = new Array();
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'images/image1.jpg'
+Pic[1] = 'images/image2.jpg'
+Pic[2] = 'images/image3.jpg'
+
+
+
+// do not edit anything below this line
+var t;
+var j = 0;
+var p = Pic.length;
+var preLoad = new Array();
+for (i = 0; i < p; i++)
+ {
+preLoad[i] = new Image();
+preLoad[i].src = Pic[i];
+}
+
+if (document.all) 
+{
+document.images.SlideShow.style.filter="blendTrans(duration=2)";
+document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)";
+document.images.SlideShow.filters.blendTrans.Apply();
+}
+document.images.SlideShow.src = preLoad[j].src;
+if (document.all) 
+{
+document.images.SlideShow.filters.blendTrans.Play();
+}
+j = j + 1;
+if (j > (p - 1))
+ j = 0;
+t = setTimeout('runSlideShow()', slideShowSpeed);
+}
+   
+    </script>
+</head>
+<body>
+<img src="images/image1.jpg" onload="runSlideShow()" style="width: 202px; height: 142px">
+</body>
+</html>

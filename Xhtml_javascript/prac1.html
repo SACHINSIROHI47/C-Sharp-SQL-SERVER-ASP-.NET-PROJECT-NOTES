@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE html 
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3c.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html>
+<head>
+<title>Welcome to XHTML</title>
+<style type="text/css">
+h1{color : red}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+</head>
+<body>
+<form name="search" method="post">
+<input name="term" size=15 maxlength=50>
+<input type="button" value="Search" onClick="Validate(this.form);">
+</form>
+<script language="JavaScript">
+
+function Validate(form)
+{
+   if(form.term.value == "")
+   {
+      alert("Enter a search term");
+   }
+   else
+   {
+      form.submit();
+   }
+}
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,1 @@
+SELECT 'Sales Person ID'=SalesPersonID, 'Territory ID' = TerritoryID FROM Sales.SalesTerritoryHistory WHERE TerritoryID = 2 OR TerritoryID = 4

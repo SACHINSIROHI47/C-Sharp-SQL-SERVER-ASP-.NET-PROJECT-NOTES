@@ -1,0 +1,1 @@
+SELECT * FROM Sales.Store WHERE Name LIKE '%bike%'

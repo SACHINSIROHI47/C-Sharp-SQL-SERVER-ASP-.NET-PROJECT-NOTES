@@ -1,0 +1,1 @@
+SELECT * FROM Sales.Currency WHERE Name LIKE '%Dollar%'

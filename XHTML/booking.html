@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!DOCTYPE html 
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3c.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+<html>
+<head>
+<title>Welcome to XHTML with JAVASCRIPT</title>
+
+</head>
+<body  bgcolor="orange">
+<form name="myform">
+Select Room Type : 
+<select name="itype" onclick="chrate(myform)">
+<option value="sd">SUPER DELUX
+<option value="de">DELUX
+<option value="sw">SWEET
+<option value="hm">HONEY MOON
+<option value="or">ORDINARY
+</select>
+<br><br>
+
+Rate : <input type=text name="irate"><br><br>
+
+Select No of Room  Requared or Type<br><br> 
+
+<select name="listroom" onclick="chroom(myform)">
+<option value="1">1
+<option value="2">2
+<option value="3">3
+<option value="4">4
+<option value="5">5
+<option value="6">6
+<option value="7">7
+<option value="8">8
+<option value="9">9
+<option value="10">10
+<option value="11">11
+<option value="12">12
+<option value="13">13
+<option value="14">14
+<option value="15">15
+<option value="16">16
+<option value="17">17
+<option value="18">18
+<option value="19">19
+<option value="20">20
+</select>
+
+<input type=text name="iroom"><br><br>
+
+<input type=button value="Click for Total Amount" onclick="calamt()">
+<br>
+<input type=text name="tamt"><br><br>
+<br><br>
+
+</option>
+</form>
+
+
+<script language="JavaScript">
+
+function chrate(myform)
+{
+
+	if(myform.itype.value=="sd")
+	{
+		myform.irate.value=6000
+	}
+	if(myform.itype.value=="de")
+	{
+		myform.irate.value=4000
+	}
+	if(myform.itype.value=="sw")
+	{
+		myform.irate.value=10000
+	}
+	if(myform.itype.value=="hm")
+	{
+		myform.irate.value=8000
+	}
+}
+
+function chroom(myform)
+{
+
+	if(myform.listroom.value=="1")
+	{
+		myform.iroom.value=1
+	}
+	if(myform.listroom.value=="2")
+	{
+		myform.iroom.value=2
+	}
+	if(myform.listroom.value=="3")
+	{
+		myform.iroom.value=3
+	}
+	if(myform.listroom.value=="4")
+	{
+		myform.iroom.value=4
+	}
+	if(myform.listroom.value=="1")
+	{
+		myform.iroom.value=5
+	}
+	if(myform.listroom.value=="5")
+	{
+		myform.iroom.value=5
+	}
+	if(myform.listroom.value=="6")
+	{
+		myform.iroom.value=6
+	}
+	if(myform.listroom.value=="7")
+	{
+		myform.iroom.value=7
+	}
+	if(myform.listroom.value=="8")
+	{
+		myform.iroom.value=8
+	}
+	if(myform.listroom.value=="9")
+	{
+		myform.iroom.value=9
+	}
+	if(myform.listroom.value=="10")
+	{
+		myform.iroom.value=10
+	}
+	if(myform.listroom.value=="11")
+	{
+		myform.iroom.value=11
+	}
+	if(myform.listroom.value=="12")
+	{
+		myform.iroom.value=12
+	}
+	if(myform.listroom.value=="13")
+	{
+		myform.iroom.value=13
+	}
+	if(myform.listroom.value=="14")
+	{
+		myform.iroom.value=14
+	}
+	if(myform.listroom.value=="15")
+	{
+		myform.iroom.value=15
+	}
+	if(myform.listroom.value=="16")
+	{
+		myform.iroom.value=16
+	}
+	if(myform.listroom.value=="17")
+	{
+		myform.iroom.value=17
+	}
+	if(myform.listroom.value=="18")
+	{
+		myform.iroom.value=18
+	}
+	if(myform.listroom.value=="19")
+	{
+		myform.iroom.value=19
+	}
+	if(myform.listroom.value=="20")
+	{
+		myform.iroom.value=20
+	}
+      
+}
+
+function calamt()
+{
+	if(myform.irate.value=="")
+	{
+		alert("Please Select Room Type")
+	}
+	else if(myform.iroom.value=="")
+	{
+		alert("Please Select or Type No. of Room Required")
+	}
+	var rate=myform.irate.value
+	var room=myform.iroom.value
+	
+	var total=rate*room
+
+	myform.tamt.value=total
+}
+</script>
+
+</body>
+</html>
+
+
+

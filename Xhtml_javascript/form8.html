@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC 
+	"-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"DTD/xhtml-transitional.dtd" >
+<html xmlns  = "http://www.w3c.org/TR/xhtml">
+<head>
+<title>Welcome to XHTML</title>
+<style type="text/css">
+h1{color : red}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle1.css" />
+</head>
+
+<body   language ="javascript>>
+<form>
+
+<p align="left">
+<input type = "reset" name = "ireset" value="Click here to Reset">
+</p>
+<br>
+<p align="right">
+<input type = "submit" name = "isubmit" value="Click here to Save"
+style="height=150;width=160; font-weight : bold; BACKGROUND-IMAGE:URL(E:\MEENU\XHTML\EVTMGMT.GIF)"
+onclick = "onsubmit()">
+</p>
+<script>
+function onsubmit()
+{
+	var ans
+	ans=prompt("Enter Your choice")
+	if(ans=="y")
+	{
+	document.write("Wecome to Java Script")
+	document.bgColor="red"
+	window.status="Welcome to NIIT"
+	alert("Welcome")
+	}
+	else
+	{
+		alert("Invalid Choice is "+ans)
+	}
+}
+function funcload()
+{
+	window.status="Welcome to NIIT"
+}
+</script>
+</form>
+
+</body>
+</html>

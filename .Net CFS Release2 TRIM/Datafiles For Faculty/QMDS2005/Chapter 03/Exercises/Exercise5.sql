@@ -1,0 +1,1 @@
+SELECT SalesOrderID, 'Territory Name' = Name, Month = Datename(mm, OrderDate), Year = Datename(yy, OrderDate) FROM Sales.SalesOrderHeader s JOIN Sales.SalesTerritory t on s.TerritoryID = t.TerritoryID

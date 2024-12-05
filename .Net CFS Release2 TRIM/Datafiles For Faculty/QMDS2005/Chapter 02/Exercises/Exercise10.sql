@@ -1,0 +1,1 @@
+SELECT * FROM Sales.SalesOrderHeader WHERE TaxAmt >= 10000

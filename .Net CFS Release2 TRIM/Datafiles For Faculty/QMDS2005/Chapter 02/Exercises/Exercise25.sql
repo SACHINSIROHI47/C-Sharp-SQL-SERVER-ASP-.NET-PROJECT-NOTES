@@ -1,0 +1,1 @@
+SELECT 'Sales Person ID' = SalesPersonID, 'Territory ID'= TerritoryID, 'Sales Quota' = SalesQuota FROM Sales.SalesPerson WHERE SalesQuota IS NOT NULL

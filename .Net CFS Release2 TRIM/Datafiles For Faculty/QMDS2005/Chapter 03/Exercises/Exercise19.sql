@@ -1,0 +1,1 @@
+SELECT SalesOrderDetailID, SalesOrderID, LineTotal FROM Sales.SalesOrderDetail s1 WHERE s1.LineTotal > (SELECT AVG(s2.LineTotal) FROM Sales.SalesOrderDetail s2 Where s1.SalesOrderID = s2.SalesOrderID)
